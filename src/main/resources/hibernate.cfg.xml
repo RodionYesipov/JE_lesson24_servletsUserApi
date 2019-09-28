@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- Create table if not exists -->
+        <!--Options:-->
+        <!--validate: validate the schema, makes no changes to the database.-->
+        <!--update: update the schema.-->
+        <!--create: creates the schema, destroying previous data.-->
+        <!--create-drop: drop the schema when the SessionFactory is closed explicitly, typically when the application is stopped.        -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL95Dialect</property>
+
+        <property name="hibernate.connection.url">jdbc:postgresql://127.0.0.1:5432/lesson24</property>
+
+        <property name="hibernate.connection.username">postgres</property>
+
+        <property name="hibernate.connection.password">Lol20091965</property>
+
+        <property name="show_sql">true</property>
+
+        <mapping class="com.yesipov.model.User"/>
+
+    </session-factory>
+</hibernate-configuration>
